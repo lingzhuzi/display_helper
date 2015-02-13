@@ -1,0 +1,32 @@
+{
+  "name": "页面小助手",
+  "description": "显示或隐藏页面的指定元素",
+  "version": "1.0",
+  "icons": {
+    "16": "img/icon_16.png" ,
+    "48": "img/icon_48.png" ,
+    "128": "img/icon.png"
+  },
+  "background": {
+    "scripts": ["js/database_storage.js", "js/background.js"],
+    "persistent": false
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "browser_action": {
+    "default_title": "页面小助手",
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["css/helper.css"],
+      "js": ["js/jquery-2.1.0.min.js", "js/helper.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>页面小助手 选项</title>
+    <link rel="stylesheet" type="text/css" href="css/options.css">
+</head>
+<body>
+<div class="body">
+    <h1 class="header">页面小助手</h1>
+    <div id="notice_wrap">保存成功</div>
+
+    <div class='version-info'>
+        <h3>版本：<span id="version_no"></span></h3>
+
+        <div id="update_ctn">
+            <h3>有新版本可以更新！</h3>
+            <label class="version"></label>
+            <a href="https://raw.githubusercontent.com/lingzhuzi/display_helper/master/release/display_helper.crx">点击下载新版本</a>
+            <p>更新日志：</p>
+            <p class="log"></p>
+            <h4>更新方法：点击上面的链接下载新版，将下载好的文件拖入浏览器的设置页面，在弹出框中点击确定即可完成安装。</h4>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <h3>选项</h3>
+
+        <div style="margin-top: 20px;">
+            <label>规则</label>
+        </div>
+
+        <div class="btn-wrap">
+            <a href="#" class="btn btn-primary add-btn">添加</a>
+            <a href="#" class="btn btn-primary del-btn">删除</a>
+            <a href="#" class="btn btn-primary enable-btn">启用</a>
+            <a href="#" class="btn btn-primary disable-btn">禁用</a>
+        </div>
+
+        <div style="margin-top: 10px;">
+            <table class="data-list" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <th width="60px" style="text-align: left;padding: 0 10px;">
+                            <input id="check_all" type="checkbox"/>
+                            <label for="check_all">全选</label>
+                        </th>
+                        <th width="300px">网址</th>
+                        <th width="200px">元素</th>
+                        <th width="60px">行为</th>
+                        <th width="60px">状态</th>
+                        <th width="140px">操作</th>
+                    </tr>
+                    <tr class="no-item-tr">
+                        <td align="center" colspan="5">
+                            <div style="width: 100%; height: 100%; padding: 0px; margin: 0px;">
+                                <div class="empty-celltable">没有规则</div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="edit-win">
+            <div class="title">
+                <label>规则</label>
+                <a class="close" href="javascript:void(0);">X</a>
+            </div>
+            <div class="row">
+                <label for="website">网址</label>
+                <input id="website"/>
+            </div>
+            <div class="row">
+                <label for="dom">元素</label>
+                <input id="dom"/>
+            </div>
+            <div class="row">
+                <label for="action">行为</label>
+                <select id="action">
+                    <option value="show">显示</option>
+                    <option value="hide">隐藏</option>
+                </select>
+            </div>
+            <div class="btn-wrapper row">
+                <input id="id" type="hidden">
+                <a class="btn btn-primary btn-save"   href="javascript:void(0);">保存</a>
+                <a class="btn btn-primary btn-cancel" href="javascript:void(0);">取消</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="help">
+        <h3>帮助</h3>
+
+        <p>使用方法如下：</p>
+
+        <p>1. 网址应该包含http://或https://，将在依此网址开头的网页上生效。</p>
+
+        <p>2. 元素的格式为标准css选择器写法。</p>
+
+        <p>3. 意见与建议反馈：请发送邮件至qdu_yanghui@126.com，在标题中请注明“#页面小助手#”。</p>
+    </div>
+</div>
+<div class="edit-win-shelter"></div>
+<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript" src="js/database_storage.js"></script>
+<script type="text/javascript" src="js/options.js"></script>
+</body>
+</html>
